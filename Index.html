@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Booking Website</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <h2>Service<span>Hub</span></h2>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+
+            <div class="user-info">
+                <span>Welcome, Vasant</span>
+                <button class="logout-btn" id="logoutBtn">Logout</button>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- Main Section -->
+    <main class="main-container" id="home">
+
+        <!-- Left Section: Cart -->
+        <section class="cart-section">
+
+            <h2>Your Selected Items</h2>
+
+            <div class="cart-items" id="cartItems">
+
+                <p id="emptyMessage">No items have been added yet.</p>
+
+                <!-- Selected services will appear here -->
+
+            </div>
+
+            <div class="cart-total">
+                <h3>Total Amount:</h3>
+                <h3 id="totalAmount">₹0</h3>
+            </div>
+
+            <button class="add-cart-btn" id="addToCartBtn">
+                Add to Cart
+            </button>
+
+        </section>
+
+
+        <!-- Right Section: Browse Services -->
+        <section class="services-section" id="services">
+
+            <div class="section-heading">
+                <h1>Browse Our Services</h1>
+                <p>
+                    Explore our services and choose the best one
+                    that suits your needs.
+                </p>
+            </div>
+
+
+            <!-- Service Cards -->
+            <div class="service-container">
+
+                <!-- Service 1 -->
+                <div class="service-card">
+
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=500" alt="Home Cleaning">
+
+                    <h3>Home Cleaning</h3>
+
+                    <p>Professional cleaning services for your home.</p>
+
+                    <h4>Price: ₹499</h4>
+
+                    <div class="service-buttons">
+                        <button class="skip-btn">Skip Item</button>
+
+                        <button class="add-btn" data-name="Home Cleaning" data-price="499">
+                            Add Item
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <!-- Service 2 -->
+                <div class="service-card">
+
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=500" alt="AC Repair">
+
+                    <h3>AC Repair</h3>
+
+                    <p>Quick and reliable air conditioner repair.</p>
+
+                    <h4>Price: ₹799</h4>
+
+                    <div class="service-buttons">
+                        <button class="skip-btn">Skip Item</button>
+
+                        <button class="add-btn" data-name="AC Repair" data-price="799">
+                            Add Item
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <!-- Service 3 -->
+                <div class="service-card">
+
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500"
+                        alt="Interior Designing">
+
+                    <h3>Interior Designing</h3>
+
+                    <p>Make your home beautiful with our designs.</p>
+
+                    <h4>Price: ₹1499</h4>
+
+                    <div class="service-buttons">
+                        <button class="skip-btn">Skip Item</button>
+
+                        <button class="add-btn" data-name="Interior Designing" data-price="1499">
+                            Add Item
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <!-- Service 4 -->
+                <div class="service-card">
+
+                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=500"
+                        alt="Electrical Services">
+
+                    <h3>Electrical Services</h3>
+
+                    <p>Safe and trusted electrical repair services.</p>
+
+                    <h4>Price: ₹599</h4>
+
+                    <div class="service-buttons">
+                        <button class="skip-btn">Skip Item</button>
+
+                        <button class="add-btn" data-name="Electrical Services" data-price="599">
+                            Add Item
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Booking Options -->
+            <div class="booking-options">
+
+                <p>Add your favourite services to the cart and book them.</p>
+
+                <button class="book-btn" id="bookNowBtn">
+                    Book Now
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Booking Form Section -->
+    <section class="booking-section" id="bookingSection">
+
+        <div class="booking-form">
+
+            <h2>Book Now</h2>
+
+            <p>Enter your details to complete your booking.</p>
+
+            <form id="bookingForm">
+
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+
+                    <input type="text" id="fullName" placeholder="Enter your full name" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+
+
+                <button type="submit" class="submit-btn">
+                    Confirm Booking
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer id="contact">
+
+        <p>© 2026 ServiceHub. All Rights Reserved.</p>
+
+    </footer>
+
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
